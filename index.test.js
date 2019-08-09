@@ -16,7 +16,7 @@ const stringify = o => JSON.stringify(o, null, "  ");
 afterEach(() => vol.reset());
 
 const scaffold = ({ caseName, fsStatus = {}, eslintConfig }) => {
-  describe(`for an ${caseName}`, () => {
+  describe(`for a ${caseName}`, () => {
     beforeAll(() => {
       vol.fromJSON(fsStatus);
 

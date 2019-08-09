@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`for an empty .eslintrc.yaml should add TypeScript ESLint to empty .eslintrc.yaml 1`] = `
+exports[`for a empty .eslintrc.yaml should add TypeScript ESLint to empty .eslintrc.yaml 1`] = `
 Object {
   "/Users/youngmink/projects/personal/mrm-task-typescript-eslint/.eslintrc.yaml": "parser: '@typescript-eslint/parser'
 settings:
@@ -19,7 +19,7 @@ extends:
 }
 `;
 
-exports[`for an preexisting .eslintrc 2 should add TypeScript ESLint to preexisting .eslintrc 2 1`] = `
+exports[`for a preexisting .eslintrc 2 should add TypeScript ESLint to preexisting .eslintrc 2 1`] = `
 Object {
   "/Users/youngmink/projects/personal/mrm-task-typescript-eslint/.eslintrc": "{
   \\"extends\\": [
@@ -54,7 +54,7 @@ Object {
 }
 `;
 
-exports[`for an preexisting .eslintrc should add TypeScript ESLint to preexisting .eslintrc 1`] = `
+exports[`for a preexisting .eslintrc should add TypeScript ESLint to preexisting .eslintrc 1`] = `
 Object {
   "/Users/youngmink/projects/personal/mrm-task-typescript-eslint/.eslintrc": "{
   \\"parser\\": \\"@typescript-eslint/parser\\",
@@ -80,7 +80,7 @@ Object {
 }
 `;
 
-exports[`for an preexisting .eslintrc.json should add TypeScript ESLint to preexisting .eslintrc.json 1`] = `
+exports[`for a preexisting .eslintrc.json should add TypeScript ESLint to preexisting .eslintrc.json 1`] = `
 Object {
   "/Users/youngmink/projects/personal/mrm-task-typescript-eslint/.eslintrc.json": "{
   \\"parser\\": \\"@typescript-eslint/parser\\",
@@ -105,7 +105,7 @@ Object {
 }
 `;
 
-exports[`for an preexisting .eslintrc.yaml should add TypeScript ESLint to preexisting .eslintrc.yaml 1`] = `
+exports[`for a preexisting .eslintrc.yaml should add TypeScript ESLint to preexisting .eslintrc.yaml 1`] = `
 Object {
   "/Users/youngmink/projects/personal/mrm-task-typescript-eslint/.eslintrc.yaml": "parser: '@typescript-eslint/parser'
 settings:

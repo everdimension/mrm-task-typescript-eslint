@@ -43,10 +43,10 @@ function findESLintConfig(eslintConfigFileName) {
       : json(eslintConfigFileName);
   }
 
-  if (yaml(".eslintrc.yaml")) return yaml(".eslintrc.yaml");
-  if (yaml(".eslintrc.yml")) return yaml(".eslintrc.yml");
-  if (json(".eslintrc.json")) return json(".eslintrc.json");
-  if (json(".eslintrc")) return json(".eslintrc");
+  if (yaml(".eslintrc.yaml").exists()) return yaml(".eslintrc.yaml");
+  if (yaml(".eslintrc.yml").exists()) return yaml(".eslintrc.yml");
+  if (json(".eslintrc.json").exists()) return json(".eslintrc.json");
+  if (json(".eslintrc").exists()) return json(".eslintrc");
   return yaml(".eslintrc.yaml");
 }
 
