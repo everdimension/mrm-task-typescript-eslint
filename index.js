@@ -6,8 +6,6 @@ const packages = [
 ];
 
 function task(config) {
-  config.defaults({ eslintConfig: ".eslintrc.js" });
-
   const { eslintConfig: eslintConfigFileName } = config.values();
 
   const eslintConfig = findESLintConfig(eslintConfigFileName);
