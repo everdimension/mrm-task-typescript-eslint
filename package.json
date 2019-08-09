@@ -1,6 +1,6 @@
 {
   "name": "mrm-task-typescript-eslint",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Mrm task that adds TypeScript ESLint",
   "main": "index.js",
   "scripts": {
@@ -24,5 +24,13 @@
   "bugs": {
     "url": "https://github.com/aprilrd/mrm-task-typescript-eslint/issues"
   },
-  "homepage": "https://github.com/aprilrd/mrm-task-typescript-eslint#readme"
+  "homepage": "https://github.com/aprilrd/mrm-task-typescript-eslint#readme",
+  "dependencies": {
+    "mrm-core": "^3.3.2"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "memfs": "^2.15.5",
+    "mrm": "^1.2.2"
+  }
 }
