@@ -10,3 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Add working task to update ESLint work with Typescript
+
+## [1.0.1] - 2019-12-29
+
+### Security
+
+- [Fix security vulnerabilities in handlebar < 4.5.3](https://snyk.io/vuln/npm:handlebars)
