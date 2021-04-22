@@ -1,17 +1,24 @@
 jest.mock("fs", () => require("memfs"));
 jest.mock("mrm-core/src/util/log", () => ({
-  added: jest.fn()
+  added: jest.fn(),
 }));
 const mockInstall = jest.fn();
 jest.mock("mrm-core/src/npm", () => ({
-  install: mockInstall
+  install: mockInstall,
 }));
 
 const { getConfigGetter } = require("mrm");
 const vol = require("memfs").vol;
 const task = require("./index");
 
-const stringify = o => JSON.stringify(o, null, "  ");
+const stringify = (o) => JSON.stringify(o, null, "  ");
+
+const cwd = `${process.cwd()}/`;
+const removeWorkingDir = (obj) =>
+  Object.keys(obj).reduce((acc, key) => {
+    acc[key.replace(cwd, "")] = obj[key];
+    return acc;
+  }, {});
 
 afterEach(() => vol.reset());
 
@@ -24,13 +31,13 @@ const scaffold = ({ caseName, fsStatus = {}, eslintConfig }) => {
     });
 
     it(`should add TypeScript ESLint to ${caseName}`, () => {
-      expect(vol.toJSON()).toMatchSnapshot();
+      expect(removeWorkingDir(vol.toJSON())).toMatchSnapshot();
     });
 
     it("should install TypeScript ESLint plugins", () => {
       expect(mockInstall).toHaveBeenCalledWith([
         "@typescript-eslint/eslint-plugin",
-        "@typescript-eslint/parser"
+        "@typescript-eslint/parser",
       ]);
     });
   });
@@ -38,26 +45,26 @@ const scaffold = ({ caseName, fsStatus = {}, eslintConfig }) => {
 
 [
   {
-    caseName: "empty .eslintrc.yaml"
+    caseName: "empty .eslintrc.yaml",
   },
   {
     caseName: "preexisting .eslintrc.yaml",
     fsStatus: {
-      "./.eslintrc.yaml": stringify("")
+      "./.eslintrc.yaml": stringify(""),
     },
-    eslintConfig: "./.eslintrc.yaml"
+    eslintConfig: "./.eslintrc.yaml",
   },
   {
     caseName: "preexisting .eslintrc.json",
     fsStatus: {
-      "./.eslintrc.json": stringify("")
+      "./.eslintrc.json": stringify(""),
     },
-    eslintConfig: "./.eslintrc.json"
+    eslintConfig: "./.eslintrc.json",
   },
   {
     caseName: "preexisting .eslintrc",
     fsStatus: { "./eslintrc": stringify({}) },
-    eslintConfig: "./.eslintrc"
+    eslintConfig: "./.eslintrc",
   },
   {
     caseName: "preexisting .eslintrc 2",
@@ -68,12 +75,12 @@ const scaffold = ({ caseName, fsStatus = {}, eslintConfig }) => {
         plugins: ["react", "prettier"],
         parserOptions: {
           ecmaFeatures: {
-            experimentalObjectRestSpread: 1
+            experimentalObjectRestSpread: 1,
           },
-          sourceType: "script"
-        }
-      })
+          sourceType: "script",
+        },
+      }),
     },
-    eslintConfig: "./.eslintrc"
-  }
+    eslintConfig: "./.eslintrc",
+  },
 ].forEach(scaffold);
