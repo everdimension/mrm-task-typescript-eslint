@@ -2,19 +2,19 @@
 
 exports[`for a empty .eslintrc.yaml should add TypeScript ESLint to empty .eslintrc.yaml 1`] = `
 Object {
-  ".eslintrc.yaml": "parser: '@typescript-eslint/parser'
+  ".eslintrc.yaml": "parser: \\"@typescript-eslint/parser\\"
 settings:
   import/parsers:
-    '@typescript-eslint/parser':
+    \\"@typescript-eslint/parser\\":
       - .js
       - .jsx
       - .ts
       - .tsx
 plugins:
-  - '@typescript-eslint'
+  - \\"@typescript-eslint\\"
 extends:
-  - 'plugin:@typescript-eslint/recommended'
-  - 'plugin:import/typescript'
+  - plugin:@typescript-eslint/recommended
+  - plugin:import/typescript
 ",
 }
 `;
@@ -107,18 +107,18 @@ Object {
 
 exports[`for a preexisting .eslintrc.yaml should add TypeScript ESLint to preexisting .eslintrc.yaml 1`] = `
 Object {
-  ".eslintrc.yaml": "parser: '@typescript-eslint/parser'
+  ".eslintrc.yaml": "parser: \\"@typescript-eslint/parser\\"
 settings:
   import/parsers:
-    '@typescript-eslint/parser':
+    \\"@typescript-eslint/parser\\":
       - .js
       - .jsx
       - .ts
       - .tsx
 plugins:
-  - '@typescript-eslint'
+  - \\"@typescript-eslint\\"
 extends:
-  - 'plugin:@typescript-eslint/recommended'
-  - 'plugin:import/typescript'",
+  - plugin:@typescript-eslint/recommended
+  - plugin:import/typescript",
 }
 `;

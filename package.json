@@ -27,11 +27,11 @@
   },
   "homepage": "https://github.com/aprilrd/mrm-task-typescript-eslint#readme",
   "dependencies": {
-    "mrm-core": "^3.3.2"
+    "mrm-core": "^6.0.0"
   },
   "devDependencies": {
     "jest": "^24.8.0",
     "memfs": "^2.15.5",
-    "mrm": "^1.2.2"
+    "mrm": "^3.0.1"
   }
 }

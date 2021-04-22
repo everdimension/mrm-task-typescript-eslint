@@ -6,7 +6,7 @@ const packages = [
 ];
 
 function task(config) {
-  const { eslintConfig: eslintConfigFileName } = config.values();
+  const { eslintConfig: eslintConfigFileName } = config;
 
   const eslintConfig = findESLintConfig(eslintConfigFileName);
 
@@ -33,7 +33,6 @@ function task(config) {
   // Dependencies
   install(packages);
 }
-task.description = "Adds TypeScript ESLint";
 
 function findESLintConfig(eslintConfigFileName) {
   if (eslintConfigFileName) {
@@ -51,3 +50,12 @@ function findESLintConfig(eslintConfigFileName) {
 }
 
 module.exports = task;
+
+module.exports.description = "Adds TypeScript ESLint";
+module.exports.parameters = {
+  eslintConfig: {
+    type: "input",
+    message: "Enter filename for the eslint configuration file",
+    default: ".eslintrc.yaml"
+  }
+};
