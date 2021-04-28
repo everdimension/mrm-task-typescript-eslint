@@ -1,5 +1,5 @@
 {
-  "name": "mrm-task-typescript-eslint",
+  "name": "mrm-task-typescript-eslint-2",
   "version": "1.0.1",
   "description": "Mrm task that adds TypeScript ESLint",
   "main": "index.js",
